@@ -5,7 +5,7 @@ if ($_POST) {
     $orderId = $_POST['orderId'];
 
     // Fetch order items
-    $orderItemSql = "SELECT * FROM order_item WHERE order_id = {$orderId}";
+    $orderItemSql = "SELECT * FROM orders WHERE order_id = {$orderId}";
     $orderItemResult = $connect->query($orderItemSql);
 
     while ($orderItemData = $orderItemResult->fetch_array()) {
