@@ -255,6 +255,25 @@ if($_GET['o'] == 'add') {
 						<th>Option</th>
 					</tr>
 				</thead>
+				<tbody>
+					<?php
+					$sql = "SELECT * FROM orders WHERE status = 1";
+            		$result = $connect->query($sql);
+            		while ($row = $result->fetch_array()) {
+                		echo "<tr>
+                    		<td>{$row['order_id']}</td>
+                    		<td>{$row['order_date']}</td>
+                    		<td>{$row['client_name']}</td>
+                    		<td>{$row['client_contact']}</td>
+                    		<td>{$row['total_order_item']}</td>
+                    		<td>{$row['payment_status']}</td>
+                    		<td>
+                        		<button type='button' class='btn btn-success issue-btn' data-order-id='{$row['order_id']}'>Issue</button>
+                    		</td>
+                		</tr>";
+            		}	
+            		?>
+        		</tbody>
 			</table>
 
 		<?php 
