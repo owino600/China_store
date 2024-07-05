@@ -257,7 +257,7 @@ if($_GET['o'] == 'add') {
 				</thead>
 				<tbody>
 					<?php
-					$sql = "SELECT * FROM orders WHERE status = 1";
+					$sql = "SELECT * FROM orders WHERE order_status = 1";
             		$result = $connect->query($sql);
             		while ($row = $result->fetch_array()) {
                 		echo "<tr>
