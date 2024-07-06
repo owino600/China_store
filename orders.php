@@ -74,9 +74,8 @@ if($_GET['o'] == 'add') {
 			<div class="success-messages"></div> <!--/success-messages-->
 
   		<form class="form-horizontal" method="POST" action="php_action/createOrder.php" id="createOrderForm">
-
-			  <div class="form-group">
-			    <label for="orderDate" class="col-sm-2 control-label">Order Date</label>
+			<div class="form-group">
+				<label for="orderDate" class="col-sm-2 control-label">Order Date</label>
 			    <div class="col-sm-10">
 			      <input type="text" class="form-control" id="orderDate" name="orderDate" autocomplete="off" />
 			    </div>
@@ -235,8 +234,8 @@ if($_GET['o'] == 'add') {
 
 			      <button type="reset" class="btn btn-default" onclick="resetOrderForm()"><i class="glyphicon glyphicon-erase"></i> Reset</button>
 			    </div>
-			  </div>
-			</form>
+			</div>
+		</form>
 		<?php } else if($_GET['o'] == 'manord') { 
 			// manage order
 			?>
@@ -312,7 +311,33 @@ if($_GET['o'] == 'add') {
 			    <div class="col-sm-10">
 			      <input type="text" class="form-control" id="clientContact" name="clientContact" placeholder="Contact Number" autocomplete="off" value="<?php echo $data[3] ?>" />
 			    </div>
-			  </div> <!--/form-group-->			  
+			  </div> <!--/form-group-->
+			  
+		<?php } else if($_GET['o'] == 'issuereq') {
+            // Issue Request
+            ?>
+			<div class="success-messages"></div> <!--/success-messages-->
+            <form class="form-horizontal" method="POST" action="php_action/issueRequest.php" id="issueRequestForm">
+                <!-- Form elements for issuing request -->
+                <div class="form-group">
+                    <label for="requestDate" class="col-sm-2 control-label">Request Date</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="requestDate" name="requestDate" autocomplete="off" />
+                    </div>
+                </div> <!--/form-group-->
+                <div class="form-group">
+                    <label for="requesterName" class="col-sm-2 control-label">Requester Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="requesterName" name="requesterName" placeholder="Requester Name" autocomplete="off" />
+                    </div>
+                </div> <!--/form-group-->
+                <div class="form-group">
+                    <label for="requesterContact" class="col-sm-2 control-label">Requester Contact</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="requesterContact" name="requesterContact" placeholder="Contact Number" autocomplete="off" />
+                    </div>
+                </div> <!--/form-group-->              
+
 
 			  <table class="table" id="productTable">
 			  	<thead>
