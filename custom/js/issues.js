@@ -16,8 +16,13 @@ $(document).ready(function() {
                 } else {
                     alert(response.message);
                 }
+            },
+            error: function(xhr, status, error) {
+                // Handle the error case
+                console.error('AJAX error: ' + status + ' - ' + error);
+                alert('An error occurred while issuing the order. Please try again.');
             }
         });
-    })
+    });
 });
 </script>
