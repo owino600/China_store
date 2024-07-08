@@ -351,9 +351,10 @@ if($_GET['o'] == 'add') {
 			  	</thead>
 			  	<tbody>
 			  		<?php
-
+					
+					$orderId = $_GET['i'];
 			  		$orderItemSql = "SELECT order_item.order_item_id, order_item.order_id, order_item.product_id, order_item.quantity, order_item.rate, order_item.total FROM order_item WHERE order_item.order_id = {$orderId}";
-						$orderItemResult = $connect->query($orderItemSql);
+					$orderItemResult = $connect->query($orderItemSql);
 						// $orderItemData = $orderItemResult->fetch_all();						
 						
 						// print_r($orderItemData);
