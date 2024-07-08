@@ -28,7 +28,7 @@ if($_GET['o'] == 'add') {
         <li class="active">Manage Order</li>
     <?php } else if($_GET['o'] == 'editOrd') { ?>
         <li class="active">Edit Order</li>
-    <?php } else if($_GET['o'] == 'issuereq') { // Added this breadcrumb condition ?>
+    <?php } else if($_GET['o'] == 'issuereq') { ?>
         <li class="active">Issue Request</li>
     <?php } // /else manage order ?>
 </ol>
@@ -47,7 +47,6 @@ if($_GET['o'] == 'add') {
 	}
 	?>	
 </h4>
-
 
 
 <div class="panel panel-default">
