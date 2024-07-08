@@ -315,8 +315,9 @@ if($_GET['o'] == 'add') {
 			  
 		<?php } else if($_GET['o'] == 'issuereq') {
             // Issue Request
-            ?>
-			<div class="success-messages"></div> <!--/success-messages-->
+			?>
+			<!-- success messages -->
+            <div class="success-messages"></div> <!--/success-messages-->
             <form class="form-horizontal" method="POST" action="php_action/issueRequest.php" id="issueRequestForm">
                 <!-- Form elements for issuing request -->
                 <div class="form-group">
@@ -337,7 +338,6 @@ if($_GET['o'] == 'add') {
                         <input type="text" class="form-control" id="requesterContact" name="requesterContact" placeholder="Contact Number" autocomplete="off" />
                     </div>
                 </div> <!--/form-group-->              
-
 
 			  <table class="table" id="productTable">
 			  	<thead>
